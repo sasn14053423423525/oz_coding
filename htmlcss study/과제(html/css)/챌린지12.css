@@ -1,0 +1,80 @@
+
+body{
+    background-clip: padding-box;
+    background-color: blanchedalmond;
+    border:2px solid black;
+    /* 바디 border밖의 색 바꾸기 */
+}
+
+.calender,.content{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    
+    /* 헤드와 메인의 테두리 붙이기 */
+}
+.calendar{
+    display:flex;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:0;
+    margin-bottom:0;
+    
+}
+.date{
+    border:2px solid black;
+    padding-left: 30px;
+    text-align: center;
+    padding:10px;
+    width: 20%;
+    margin-top:16px;
+    margin-bottom:0;
+     
+}
+
+.weather{
+    border:2px solid black;
+    text-align: center;
+    padding-top: 10px;
+    width:80%;
+    margin-top:16px;
+    margin-bottom:0;
+}
+/* 메인이 헤드와 붙는 방법 */
+.content{
+    border:2px solid black;
+    margin-top:0;
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom:5px;
+    background-color: white;
+}
+/* 밑줄 길이를 내용과 상관없이 길게 하는방법 */
+.title{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.cat{
+    display:flex;
+    justify-content: center;
+    background-size:300px 300px;
+}
+
+.diary{
+    margin:5px;
+    background-color: white;
+}
+
+.tablee{
+    width:100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+table td{
+    text-align: center;
+    border:2px solid black;
+    width:30px;
+    height: 30px;
+}

@@ -1,0 +1,26 @@
+*{box-sizing: border-box;}
+html{
+    width:100%;
+    display:flex;
+}
+.carousel-wrapper {
+    width:522px;
+    height:300px;
+}
+
+.carousel-wrapper > .carousel {
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.2s;
+}
+
+.carousel-wrapper > .carousel > img {
+    width:522px;
+    height:300px;
+}
+@media screen and (max-width:700px){
+    .carousel{
+        width:700px;
+    }
+}
+    

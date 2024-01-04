@@ -1,0 +1,59 @@
+.info{
+    width:100%;
+    height:19.6875rem;
+    background-color: orange;
+    position: relative;
+}
+.duduck{
+    margin:0;
+    position: absolute;
+    bottom:0px;
+    right:10%;
+}
+.info_text{
+    max-width:48rem;
+    margin:auto;
+    padding:3rem 1rem 0;
+}
+.info_text h1{
+    margin:0;
+    font-size: 2rem;
+    line-height: 3.2rem;
+}
+.info_text p{
+    margin:0.5rem 0 0;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+.info_text .up{
+    background-color: tomato;
+    color:#fff;
+    padding:0.5rem;
+    border:none;
+    border-radius:0.5rem;
+    display:none;
+}
+@media screen and (max-width:768px){
+    .info{
+        height:18.375rem;
+    }
+    .info_text{
+        padding:1.5rem 1rem 0;
+    }
+    .info_text h1{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    .info_text p{
+        display:none;
+    }
+    .duduck{
+        width:469px;
+        height:202px;
+        position: absolute;
+        bottom:0;
+}
+    .info_text .up{
+        display:block;
+    }
+}

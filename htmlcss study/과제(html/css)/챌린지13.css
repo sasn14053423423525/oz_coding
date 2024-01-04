@@ -1,0 +1,75 @@
+*{
+    font-family: 'Dongle', sans-serif;
+    
+    font-weight: 800;
+    
+}
+/* 오버플로우를 어디에 사용해야 하는지 */
+
+body{
+    background-color: burlywood;
+}
+
+.first{
+    box-shadow:0 0 10px;
+    border-radius: 10px;
+    display:flex;
+    
+}
+
+.left{
+    background-color: orange;
+    display: inline-block;
+    width:20%;
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    
+   
+}
+
+.right{
+    background-color: white;
+    width:100%;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+.one{
+    padding:2px;
+    
+    display: block;
+    font-size: 36px;
+}
+.two{
+    padding:2px;
+    display: block;
+    font-size: 24px;
+}
+.three{
+    padding:2px;
+    display: block;
+    color:green;
+    font-size: 24px;
+}
+.four{
+    padding:2px;
+    display: block;
+    color:green;
+    font-size: 24px;
+}
+.five{
+    display: block;
+    padding:2px;
+    color:green;
+    font-size: 24px;
+}

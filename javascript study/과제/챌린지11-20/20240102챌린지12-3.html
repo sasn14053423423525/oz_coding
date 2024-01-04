@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운트 다운</title>
+</head>
+<body>
+    <!-- 요구사항 : 실시간 날짜와 시간 -->
+    <!-- 2024년 12월31일 23시 59분59초999밀리초 - 현재시간을 해서 남은시간 계산하기 -->
+    <p id="now"></p>
+    <p id="end"></p>
+    <script>
+        setInterval(function(){
+       
+        const p = document.getElementById("now");
+
+        const a = document.getElementById("end");
+
+        const now = new Date();
+        const endDate = new Date('2024-12-31T23:59:59.999+09:00');
+        const timeDifference = endDate.getTime() - now.getTime();
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        const milliseconds = timeDifference % 1000;
+        const daysOfWeek = ['Mon','Tue','Wed','Thur','Fri','Sat','Sun']
+        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+        const monthindex = now.getMonth();
+        const dayOfweekindex = now.getDay();
+        const dayOfWeek = daysOfWeek[dayOfweekindex];
+        const month = months[monthindex];
+        let day = now.getDate()
+        let year = now.getFullYear()
+        let hour = now.getHours()
+        let min = now.getMinutes()
+        let sec = now.getSeconds()
+        
+        a.textContent = `올해 남은 시간 :${days}일 ${hours}:${minutes}:${seconds}초 남았습니다`
+        p.textContent = `현재 시간 :${dayOfWeek} ${month} ${day} ${year} ${hour}:${min}:${sec} GMT+09:00 (한국 표준시) `
+         },1000) 
+        </script>
+</body>
+</html>

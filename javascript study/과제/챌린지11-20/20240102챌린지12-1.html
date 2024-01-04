@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>간단한 계산기</title>
+  <style>
+    body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .calculater{
+        display:plex;
+        justify-content: center;
+        width:300px;
+        height:400px;
+        background-color: aqua;
+        border:1px solid black;
+        border-radius: 10px;
+        padding-bottom:0;
+    }
+    #display{
+        width:250px;
+        height:50px;
+        font-size: 24px;
+        background-color: white;
+        text-align: right;
+        border:1px solid black;
+        border-radius: 10px;
+        margin-bottom:20px;
+    }
+    .button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin: 5px;
+        border:1px solid black;
+        border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="calculater">
+    <h2>Click MyCalculater</h2>
+<input type="text" id="display" disabled><br>
+
+<button class="button" onclick="addToDisplay(7)">7</button>
+<button class="button" onclick="addToDisplay(8)">8</button>
+<button class="button" onclick="addToDisplay(9)">9</button>
+<button class="button" onclick="operation('*')">*</button><br>
+
+<button class="button" onclick="addToDisplay(4)">4</button>
+<button class="button" onclick="addToDisplay(5)">5</button>
+<button class="button" onclick="addToDisplay(6)">6</button>
+<button class="button" onclick="operation('/')">/</button><br>
+
+<button class="button" onclick="addToDisplay(1)">1</button>
+<button class="button" onclick="addToDisplay(2)">2</button>
+<button class="button" onclick="addToDisplay(3)">3</button>
+<button class="button" onclick="operation('-')">-</button><br>
+
+<button class="button" onclick="clearDisplay()">C</button>
+<button class="button" onclick="addToDisplay(0)">0</button>
+<button class="button" onclick="operation('+')">+</button>
+<button class="button" onclick="calculate()">=</button><br>
+</div>
+<script>
+  let displayValue = '';
+
+  function addToDisplay(value) {
+    displayValue += value;
+    document.getElementById('display').value = displayValue;
+  }
+
+  function clearDisplay() {
+    displayValue = '';
+    document.getElementById('display').value = displayValue;
+  }
+
+  function operation(operator) {
+    displayValue += ' ' + operator + ' ';
+    document.getElementById('display').value = displayValue;
+  }
+
+  function calculate() {
+    let result = eval(displayValue);
+    document.getElementById('display').value = result;
+    displayValue = result.toString();
+  }
+</script>
+
+</body>
+</html>

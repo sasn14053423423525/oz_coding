@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 만들기</title>
+    <style>
+        footer{
+            display: flex;
+            justify-content: center;
+        }
+        table{
+            border:1px solid black;
+            
+        }
+        th{
+            width:100px;
+            border:1px solid black;
+        }
+        td{
+            width:100px;
+            border:1px solid black;
+            text-align: center;
+        }
+        #title{
+            text-align: center;
+        }
+        #sub{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2 id="title">구구단 표</h2>
+        </header>
+        <main>
+            <h4 id="sub">2단~9단을 만들어 보세요!</h4>
+        </main>
+        <footer>
+            <table id="table">
+                <caption>
+                    
+                </caption>
+            </table>
+        </footer>
+    </div>
+    <script>
+        const table=document.getElementById('table');
+
+        const firstRow = document.createElement('tr');
+        for(let i=2; i <=9; i++){
+            const headerCell = document.createElement('th');
+            headerCell.textContent = `${i}단`;
+            firstRow.appendChild(headerCell);
+        }
+        table.appendChild(firstRow);
+
+        for(let j=1; j <=9; j++){
+            const row = document.createElement('tr');
+            for(let i =2; i <=9; i++){
+            const cell = document.createElement('td');
+            const result = i * j;
+            cell.textContent = `${i}*${j}=${result}`;
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
+    </script>
+</body>
+</html>

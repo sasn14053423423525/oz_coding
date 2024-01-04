@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동으로 배경 이미지 변경</title>
+    <style>
+        body {
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .images img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            display: none; /* 모든 이미지 숨기기 */
+        }
+    </style>
+</head>
+<body>
+    <div class="images">
+        <img src="가위.jpeg" alt="이미지 1" onclick="changeBackground('가위.jpeg')">
+        <img src="바위.jpeg" alt="이미지 2" onclick="changeBackground('바위.jpeg')">
+        <img src="보.jpeg" alt="이미지 3" onclick="changeBackground('보.jpeg')">
+    </div>
+    <button onclick="stopChanging()">멈춰</button>
+
+    <script>
+        let intervalId;
+        let currentImageIndex = 0; // 현재 이미지 인덱스 변수 추가
+
+        function changeBackground(imageSrc) {
+            document.body.style.backgroundImage = `url(${imageSrc})`;
+        }
+
+        function startChanging() {
+            const images = document.querySelectorAll('.images img');
+            intervalId = setInterval(function() {
+                images.forEach(img => img.style.display = 'none'); // 모든 이미지 숨기기
+                images[currentImageIndex].style.display = 'block'; // 현재 이미지만 보이도록 설정
+                currentImageIndex = (currentImageIndex + 1) % images.length; // 다음 이미지로 인덱스 변경
+            }, 500);
+        }
+
+        function stopChanging() {
+            clearInterval(intervalId);
+        }
+
+        // 페이지 로드 시 이미지 변경 시작
+        startChanging();
+    </script>
+</body>
+</html>
+
+

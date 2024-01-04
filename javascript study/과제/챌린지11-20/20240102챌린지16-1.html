@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보 게임</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h2 class="title">가위바위보 게임</h2>
+        </div>
+        <div class="sub">
+            <h4 class="sub_title">가위,바위,보 중 하나를 입력하세요</h4>
+        </div>
+        
+        <div class="main">
+            <input type="text" id="input" placeholder="가위,바위,보를 입력하세요">
+            <button id="enter" onclick="playGame()">결과 확인</button>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script>
+        function playGame(){
+            const userChoice = document.getElementById("input").value.toLowerCase();
+            const choices = ["가위","바위","보"];
+            const computerChoice = choices[Math.floor(Math.random() * 3 )];
+            
+
+            let result;
+            if(!choices.includes(userChoice)){
+                result = "잘못된 입력입니다!";
+            } else if (userChoice === computerChoice) {
+                result = "비겼습니다!";
+            } else if (
+                (userChoice === "가위" && computerChoice === "보") ||
+                (userChoice === "바위" && computerChoice === "가위") ||
+                (userChoice === "보" && computerChoice === "바위") 
+            ){result = "당신이 이겼습니다";}
+            else{result = "컴퓨터가 이겼습니다";}
+                
+            document.getElementById("result").innerText = `당신의 선택 : ${userChoice}/ 컴퓨터의 선택 : ${computerChoice}/ 결과 : ${result}`;
+        }
+    </script>
+</body>
+</html>

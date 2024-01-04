@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿 리터럴</title>
+</head>
+<body>
+    문자열 포맷팅
+    <!-- 반환값이 존재하는 자바스크립트 코드, 즉 표현식을 내장할 수 있는
+    문자열 표현법. 문자열의 내용에 데이터를 삽입한다는 것을 의미
+    템플릿 리터럴로 표현한 문자열 내부에 프렐이스홀더${}를 기입하면
+    데이터는 문자열의 멤버가 된다. -->
+    <script>
+        const dog = "강아지"
+        const cat = `고양이`
+        console.log(typeof cat)
+
+        const modifier = "귀여운"
+        const prettydog = `${modifier} ${dog}`
+        console.log(prettydog)
+
+        const prettypet = `${modifier} ${prompt("좋아하는 동물은?")}`
+        console.log(prettypet)
+</script>
+</body>
+</html>

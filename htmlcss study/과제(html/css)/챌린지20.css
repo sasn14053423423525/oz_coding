@@ -1,0 +1,211 @@
+html{
+    width:100%;
+    height:100%;
+    margin:0;
+}
+a{
+    color:white;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    width:100%;
+    height:100%;
+    margin:0;
+    overflow: scroll;
+}
+.front{
+    position:relative;
+    height:250px;
+    background-image: url("images/탕후루.jpeg");
+    background-size: 40%;
+    filter:brightness(70%)
+}
+.cheer{
+    position: absolute;
+    color:white;
+    text-align: center;
+    font-size: 24px;
+    top:30%;
+    left:35%;
+    background-color: transparent;
+}
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.blinking{
+    animation:blink 1s infinite;
+}
+main{
+    background-color: #333;
+    color:white;
+    padding:10px;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-icon{
+    cursor:pointer;
+    font-size:28px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+nav ul li{
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+nav a{
+    text-decoration: none;
+    color:white;
+}
+.title{
+    position:relative;
+    top: 100px;
+    max: width 100%;;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.content{
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top:20px;
+    color:white;
+    position: relative;
+    top:200px;
+}
+.fast{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:200px;
+    height:200px;
+    background-color: purple;
+    padding-top:20px;
+    margin: 10px;
+}
+.fast:hover{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:220px;
+    height:220px;
+    background-color: purple;
+    padding-top:20px;
+    margin: 10px;
+    transform:scale(105%,105%);
+}
+.easy{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:200px;
+    height:200px;
+    background-color: purple;
+    margin: 10px;
+    padding-top:20px;
+}
+.easy:hover{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:220px;
+    height:220px;
+    background-color: purple;
+    margin: 10px;
+    padding-top:20px;
+}
+
+.play{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    width:200px;
+    height:200px;
+    background-color: purple;
+    padding-top:20px;
+    margin:10px;
+    
+}
+.play:hover{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    width:220px;
+    height:220px;
+    background-color: purple;
+    padding-top:20px;
+    margin:10px;
+}
+.burger{
+    display: none;
+    width:140px;
+    position: relative;
+    }
+.burger a{
+    
+    text-decoration: none;
+    color:white;
+}
+.burger > li > ul{
+    display: n;
+}
+.burger:hover>ul>li{
+    display: block;
+    width:140px;
+    
+}
+.burger>ul>li{
+    display: none;
+    list-style: none;
+    background-color: #333;
+    padding:20px;
+    text-align: center;
+    position: relative;
+    right:130px;
+}
+li{list-style: none;}
+@media screen and (max-width:768px){
+    nav ul li{
+        display: none;
+    }
+    .burger{
+        display:flex;
+            text-align: center;
+            width:200px;
+            height:40px;
+            font-size: 24px;
+            color:white;
+    }
+}
+    
+.subtitle{
+    margin: 10px;;
+}
+.content >a{
+    list-style: none;
+}

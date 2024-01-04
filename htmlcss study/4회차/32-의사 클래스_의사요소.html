@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <title>의사 클래스&의사 요소</title>
+    <style>
+        .menu{
+            padding:10px;
+            border-bottom: 1px solid black;
+            border-radius: 1px;
+            text-align: center;
+        }
+        .menu>li{
+            display: inline-block;
+            text-align: center;
+           
+        
+        }
+        li>a{
+            display: inline-block;
+            width: 80px;
+            padding: 10px;
+            text-decoration: none;
+            
+        }
+        a:hover{
+            color:white;
+            background-color: gray;
+        }
+        a:active{
+            color:white;
+            background-color: black;
+        }
+        li:nth-child(n){
+            font-size: 20px;
+        }
+
+        a::after{
+            content:"보기";
+            color:green;
+            font-size: 16px;
+        }
+</style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="3">사전</a></li>
+        <li><a href="3">뉴스</a></li>
+        <li><a href="3">증권</a></li>
+        <li><a href="3">지도</a></li>
+    </ul>
+   
+</body>
+</html>

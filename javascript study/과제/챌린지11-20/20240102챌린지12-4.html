@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스탑워치 만들기</title>
+</head>
+<body>
+    <div>
+        <h1>스톱워치</h1>
+        <p id="time">00:00:00</p>
+        <div id="btn">
+            <button id="start">시작</button>
+            <button id="stop">중지</button>
+            <button id="reset">리셋</button>
+        </div>
+        <script>
+            const timeDisplay = document.getElementById("time");
+            let startTime = 0;
+            let pausedTime = 0;
+            let isRunning = false;
+            let timer;
+
+            document.getElementById('start').addEventListener('click', function() {
+                if (!isRunning) {
+                    let currentTime = new Date().getTime();
+                    startTime = currentTime - pausedTime;
+                    isRunning = true;
+                    timer = setInterval(updateTime, 10);
+                }
+            });
+
+            document.getElementById('stop').addEventListener('click', function() {
+                clearInterval(timer);
+                isRunning = false;
+                pausedTime = new Date().getTime() - startTime;
+            });
+
+            document.getElementById('reset').addEventListener('click', function() {
+                clearInterval(timer);
+                isRunning = false;
+                pausedTime = 0;
+                timeDisplay.innerText = '00:00:00';
+            });
+
+            function updateTime() {
+                let currentTime = new Date().getTime();
+                let elapsedTime = new Date(currentTime - startTime);
+                let hours = elapsedTime.getUTCHours();
+                let minutes = elapsedTime.getUTCMinutes();
+                let seconds = elapsedTime.getUTCSeconds();
+                let milliseconds = elapsedTime.getUTCMilliseconds();
+
+                hours = (hours < 10) ? "0" + hours : hours;
+                minutes = (minutes < 10) ? "0" + minutes : minutes;
+                seconds = (seconds < 10) ? "0" + seconds : seconds;
+                milliseconds = (milliseconds < 100) ? "0" + milliseconds : milliseconds;
+
+                timeDisplay.innerText = hours + ":" + minutes + ":" + seconds + ":" + milliseconds;
+            }
+        </script>
+    </div>
+</body>
+</html>

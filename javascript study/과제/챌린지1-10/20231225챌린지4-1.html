@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다크모드 만들기</title>
+    <style>
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body class="light-mode">
+
+    <button onclick="darkMode()" id="darkButton">다크 모드</button>
+    <button onclick="lightMode()" id="lightButton">라이트 모드</button>
+    
+    <script>
+        function darkMode() {
+            let body = document.body;
+            body.classList.remove("light-mode");
+            body.classList.add("dark-mode");
+        }
+
+        function lightMode() {
+            let body = document.body;
+            body.classList.remove("dark-mode");
+            body.classList.add("light-mode");
+        }
+    </script>
+    
+</body>
+</html>

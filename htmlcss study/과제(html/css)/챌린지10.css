@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 315px;
+    background:linear-gradient(to top right,rgb(49, 121, 245),rgb(243, 65, 65));
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.hello{
+    background-color: #ffffff;
+    color:skyblue;
+    padding:20px;
+    border-radius: 10px;
+    border-color: skyblue;
+}
+.hello:hover{
+    border-color: purple;
+    color:purple;
+}
+.hello:active{
+    background-color: rgb(173, 169, 169);
+}

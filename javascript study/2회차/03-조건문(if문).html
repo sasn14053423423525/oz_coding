@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <!-- if(조건){}
+        else{} -->
+        <h1></h1>
+        <p></p>
+        <script>
+        // let age = prompt("나이가 몇살입니까?");
+            
+        // if(age < 20){
+        //         console.log("미성년자 입니다");}
+        //     else if(age > 70){
+        //         console.log("노인입니다");
+        //     }
+        // else{console.log("성인입니다");}
+        // 
+        const h1 = document.querySelector('h1')
+        const p = document.querySelector('p')
+
+        const isThere = confirm("버스요금을 알아볼게요")
+        
+        if(isThere){
+            h1.textContent = "당신이 내야 할 버스요금은?"
+        }
+        const age = parseInt(prompt("나이가 어떻게 되세요?"))
+            if(age < 20){
+                p.textContent = "950원 입니다"
+            }
+            // if랑 else if랑 겹치는데 elseif가 더 상위로 가는 방법은 없는가
+            else if(age >= 20){
+                p.textContent = "1250원 입니다"
+            }
+            if(age >=70){
+                p.textContent = "950원 입니다"
+            }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while문</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+// HTML에서 출력을 담당하는 요소 선택
+const outputElement = document.getElementById("output");
+
+// 특정 범위 내에서 5개씩 숫자 출력
+let count = 0;
+let number = 100; // 시작 숫자 (원하는 숫자부터 시작 가능)
+const endNumber = 500; // 종료 숫자 설정
+
+while (number <= endNumber) {
+    outputElement.innerHTML += number + " ";
+
+    // 5개씩 출력하고 줄 바꿈
+    count++;
+    if (count % 5 === 0) {
+        outputElement.innerHTML += "<br>";
+    }
+
+    // 다음 숫자로 이동
+    number += 4; // 4의 배수
+}
+
+    </script>
+    
+</body>
+</html>

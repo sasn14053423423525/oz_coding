@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 반복문</title>
+</head>
+<body>
+    <h1>별 트리 찍기</h1>
+    <script>
+        document.write('<h3>1번 별</h3>');
+        for(let i = 0; i <=5; i ++){
+            document.write('*'.repeat(i)+'<br>');
+        }
+        document.write('<h3>2번 별</h3>');
+        for(let i = 0; i <=5; i ++){
+            document.write('*'.repeat(i)+'<br>');
+        }
+        for(let i = 4; i >=1; i --){
+            document.write('*'.repeat(i)+'<br>');
+        }
+        document.write('<h3>3번 별</h3>');
+        
+    let height = 7;
+    for(let i = 1; i <=height; i += 1){
+        let space = ' ';
+        let star = '*';
+        for(let j=1; j <=height-i; j++){
+            space= space +' ';
+            
+        }
+        for(let k=1; k<=i*2-1; k++){
+            space = space +'*';
+        }
+        document.write('<pre>'+space+'</pre>')  
+             console.log(space)
+    }
+    for(let i = height-1; i >=1; i -= 1){
+        let space = ' ';
+        let star = '*';
+        for(let j=1; j <=height-i; j++){
+            space= space +' ';
+            
+        }
+        for(let k=1; k<=i*2-1; k++){
+            space = space +'*';
+        }
+        document.write('<pre>'+space+'</pre>')  
+             console.log(space)
+    }
+   
+</script>
+
+</body>
+</html>

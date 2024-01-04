@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅방 만들기</title>
+    <link href="챌린지19.css" rel="stylesheet">
+    <link href="챌린지19-말풍선.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+        
+</head>
+<body>
+   <div class="container">
+    <main class="chat-screen">
+        <section class="chat-screen__bar">
+            <div class="user">
+                <div class="user__column">
+                    <div >
+                        <img src="images/다운로드.jpeg" alt="고양이 프사" width="50px" height="50px" class="user__pic"></a>
+                    </div>
+                </div>
+                <div class="user__column">
+                    <p class="user__nick">친구</p>
+                    <p class="user__count">2</p>
+                </div>
+            </div>
+        </section>
+     <div class="chat-box">
+        <ul class="chat-screen_texts">
+            <li class="text-to">친구야 반가워</li>
+            <li class="text-from">우리 언제 밥이나 한 번 먹자</li>
+            <li class="text-to">그래 다음에 밥이나 먹자</li>
+            <li class="text-from">나중에 연락해</li>
+            <li class="text-to">친구야 반가워</li>
+            <li class="text-from">우리 언제 밥이나 한 번 먹자</li>
+            <li class="text-to">그래 다음에 밥이나 먹자</li>
+            <li class="text-from">나중에 연락해</li>
+        </ul>
+    </div>
+    </main>
+
+    <form class="chat-form">
+        <section class="chat-form__field">
+            <textarea class="chat-form__msg" rows="2" cols="38"></textarea>
+            <input type="submit" value="전송" class="chat-form__bt">
+        </section>
+    </form>
+   </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>아이스크림 목록</title>
+</head>
+<body>
+    <h1>아이스크림 목록</h1>
+    <button id="addIcecreamBtn">아이스크림 종류 추가</button>
+    <button id="showIcecreamBtn">아이스크림 이름 출력</button>
+    <button id="showAllIcecreamsBtn">입력한 아이스크림 목록 출력</button>
+    <div id="icecreamInputDiv" style="display: none;">
+        <input type="text" id="icecreamInput">
+        <button id="saveIcecreamBtn">저장</button>
+    </div>
+    <div id="icecreamList"></div>
+
+    <script>
+        const addIcecreamBtn = document.getElementById("addIcecreamBtn");
+        const showIcecreamBtn = document.getElementById("showIcecreamBtn");
+        const showAllIcecreamsBtn = document.getElementById("showAllIcecreamsBtn");
+        const icecreamInputDiv = document.getElementById("icecreamInputDiv");
+        const icecreamInput = document.getElementById("icecreamInput");
+        const saveIcecreamBtn = document.getElementById("saveIcecreamBtn");
+        const icecreamListDiv = document.getElementById("icecreamList");
+        const icecreams = [];
+
+        addIcecreamBtn.addEventListener("click", function() {
+            const newIcecream = prompt("추가할 아이스크림 종류를 입력하세요")
+            if(newIcecream){
+                icecreams.push(newIcecream);}
+            })
+
+        saveIcecreamBtn.addEventListener("click", function() {
+            const newIcecream = icecreamInput.value;
+            icecreams.push(newIcecream);
+            icecreamInput.value = "";
+            icecreamInputDiv.style.display = "none";
+        });
+
+        showIcecreamBtn.addEventListener("click", function() {
+            alert("추가한 아이스크림: " + icecreams.join(", "));
+        });
+
+        showAllIcecreamsBtn.addEventListener("click", function() {
+            icecreamListDiv.innerHTML = "";
+            icecreams.forEach(function(icecream) {
+                const icecreamItem = document.createElement("p");
+                icecreamItem.textContent = icecream;
+                icecreamListDiv.appendChild(icecreamItem);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,104 @@
+*{
+    text-align: center;
+    
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    height:100vh
+    
+}
+main{
+    background-color:  rgb(236, 246, 218);
+    border: 0px solid black;
+    width:480px;
+    height:640px;
+    padding-bottom:50px;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow:#A6CF98 8px 8px, #F3B664 12px 12px,#557C55 15px 15px, #557C55 18px 18px, #FA7070 23px 23px;;
+}
+#email,#id,#pw,#name{
+    width: 400px;
+    background-color: white;
+    padding:12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.phone{
+    width: 90px;
+    background-color: white;
+    padding:12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.text{
+    background-color: white;
+    border-radius: 10px;
+}
+
+#click{
+    text-align: right;
+    border-radius: 10px;
+    margin-right:20px;
+    border-radius: 10px;
+    
+}
+#click input{
+    cursor: pointer;
+}
+#send{
+    border-radius: 5px;
+}
+#send:hover{
+    background-color: gray;
+    border-radius: 5px;
+
+}
+#check{
+    border-radius: 5px;
+}
+#check:hover{
+    background-color: gray;
+    cursor: pointer;
+    border-radius: 5px;
+  
+}
+#ok{
+    text-align: right;
+    margin-top: 20px;
+    margin-right:20px;
+    border-radius: 10px;
+}
+#check:disabled{
+    background-color: gray;
+}
+
+.area{
+    width: 400px;
+    background-color: white;
+    padding:12px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align:left;
+    border-radius: 10px;
+}
+.submit{
+    width: 400px;
+    background-color: white;
+    padding:12px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+}

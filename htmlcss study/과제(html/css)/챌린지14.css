@@ -1,0 +1,134 @@
+    body{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: skyblue;
+        
+    }
+    
+    .hat-a{
+        width: 50px;
+        height:50px;
+        background-color: black;
+        left:115px;
+        position:relative;
+    }
+    .hat-b{
+        width:80px;
+        height: 20px;
+        background-color: black;
+        position: relative;
+        left:100px;
+        z-index: 9;
+    }
+    
+    .eye-a{
+        background-color: black;
+        width:15px;
+        height:15px;
+        border-radius: 10px;
+        position: relative;
+        left:40px;
+        top:65px;
+        z-index: 9;
+    }
+    .eye-b{
+        background-color: black;
+        width:15px;
+        height:15px;
+        border-radius: 10px;
+        position: relative;
+        left:60px;
+        top:50px;
+        z-index: 9;
+    }
+    .mouse{
+        width: 30px;
+        height:15px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: black;
+        position: relative;
+        top:60px;
+        left:43px;
+        z-index: 10;
+    }
+    .cloth-a{
+        background-color: black;
+        width:15px;
+        height:15px;
+        border-radius: 10px;
+        position: relative;
+        top:140px;
+        left:25px;
+        z-index: 10;
+        
+    }
+    .cloth-b{
+        background-color: black;
+        width:15px;
+        height:15px;
+        border-radius: 10px;
+        position: relative;
+        top:145px;
+        left:25px;
+        z-index: 10;
+    }
+    .cloth-c{
+        background-color: black;
+        width:15px;
+        height:15px;
+        border-radius: 10px;
+        position: relative;
+        top:150px;
+        left:25px;
+        z-index: 10;
+    }
+    .snow{
+        position: relative;
+        top:170px;
+        right:20px;
+        z-index: 5;
+    }
+    .snow-a{
+        width: 70px;
+        height:70px;
+        background-color: white;
+        border-radius: 50px;
+    }
+    .snow-b{
+        width: 90px;
+        height:90px;
+        background-color: white;
+        border-radius: 70px;
+        position: relative;
+        right:8px;
+    }
+    .snow-c{
+        width: 120px;
+        height:120px;
+        background-color: white;
+        border-radius: 80px;
+        position: relative;
+        right:20px;
+    }
+    .hand-a{
+        width:80px;
+        height:10px;
+        background-color: brown;
+        transform: rotate(30deg);
+        position: relative;
+        right:210px;
+        top:110px;
+        z-index: 1;
+    }
+    .hand-b{
+        width:80px;
+        height:10px;
+        background-color: brown;
+        transform: rotate(330deg);
+        position: relative;
+        right:80px;
+        top:100px;
+    }
