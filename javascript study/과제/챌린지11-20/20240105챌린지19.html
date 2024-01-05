@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>할 일 목록 만들기</title>
-    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="20240105챌린지19.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="app">
+            <h2 class="list">할 일 목록 <미루지 않기></h2>
+            <ul id="todo-list"></ul>
+            <form id="todo-form">
+                <input name="todo"
+                placeholder="오늘 해야할 일..."
+                autocomplete="off">
+                <input type="submit" value="추가">
+            </form>
+        </div>
+    </div>
 
 
-    <script src="todo.js"></script>
+    <script src="20240105챌린지19.js"></script>
 </body>
 </html>
