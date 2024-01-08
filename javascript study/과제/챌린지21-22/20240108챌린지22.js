@@ -25,8 +25,11 @@ function displayDogs(item){
     //이거 꼭 해석하기@@
     function loadWindow(){
         //강아지 사진 뿌리기
+        request1.addEventListener("load",handleRequest1Response);
+        request2.addEventListener("load",handleRequest2Response);
+}
         request1.open("get",apiRandomDogs)
-        function handleRequest2Response(){
+        function handleRequest1Response(){
             const response = JSON.parse(request1.response)
             response.message.forEach(function(item){
                 currentDogs.push(item)
@@ -36,7 +39,7 @@ function displayDogs(item){
         request1.send()
         //셀렉트에 견종 정보 뿌리기
         request2.open("get",apiAllbreeds)
-        function handleRequest1Response(){
+        function handleRequest2Response(){
             const response = JSON.parse(request2.response)
             Object.keys(response.message).forEach(function(item){
                 const option = document.createElement("option")
@@ -48,9 +51,6 @@ function displayDogs(item){
         }
         request2.send()
 
-        request1.addEventListener("load",handleRequest2Response);
-        request2.addEventListener("load",handleRequest1Response);
-}
         window.addEventListener("load",loadWindow)
         
 button.addEventListener("click", function() {
