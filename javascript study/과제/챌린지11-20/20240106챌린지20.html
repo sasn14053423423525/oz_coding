@@ -56,13 +56,40 @@
             </table>
         </div>
         <div id="result">
-            <h3 class="list"></h3>
+            
         </div>
 
     </div>
 
     <script>
-       ㅠㅠ
-    </script>
+        let scores = [ 
+        {'name':'짱구', 'score' : 45},
+        {'name':'맹구','score':75},
+        {'name':'철수','score':95},
+        {'name':'훈이','score':50},
+        {'name':'유리','score':68},
+        {'name':'수지','score':86}];
+
+        scores.sort((a, b) => b.score - a.score);
+        
+        let result = document.getElementById('result');
+        let highScores = [];
+       
+        for(let i=0; i<scores.length; i++){
+          if(scores[i].score >= 75){
+              highScores.push(scores[i].name);
+            }
+         }
+        let resultHeader = document.createElement("h3");
+        resultHeader.textContent='75점이 넘는 사람:';
+ 
+        result.appendChild(resultHeader);
+
+        for(let i=0; i< highScores.length; i++){
+            let paraGraph = document.createElement('p');
+            paraGraph.textContent = highScores[i];
+            result.appendChild(paraGraph);
+        }
+ </script>
 </body>
 </html>
