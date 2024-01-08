@@ -52,6 +52,7 @@ function displayDogs(item){
         request2.addEventListener("load",handleRequest1Response);
 }
         window.addEventListener("load",loadWindow)
+        
 button.addEventListener("click", function() {
     main.innerHTML = ""
     let filteredDogs = currentDogs.filter(function(item){
@@ -106,3 +107,13 @@ tothetop.addEventListener("click",function(){
     window.scrollTo({ top : 0 })
 })
 
+
+// 중복을 제외한 이미지 배열
+const uniqueDogs = [];
+
+currentDogs.forEach(function(item) {
+    if (!uniqueDogs.includes(item)) {
+        uniqueDogs.push(item);
+        displayDogs(item);
+    }
+});
