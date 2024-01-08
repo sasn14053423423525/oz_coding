@@ -77,6 +77,7 @@ function updateTimer() {
         if (days < 0) {
           clearInterval(timerInterval);
           alert('타이머가 종료되었습니다.');
+          document.querySelector('.start-button').disabled = false;
           timerStarted = false;
           day = Math.max(0,days);
           hours = Math.max(0,hours);
@@ -94,7 +95,10 @@ function updateDisplay() {
   document.querySelector('.hour').textContent = hours.toString().padStart(2, '0');
   document.querySelector('.min').textContent = minutes.toString().padStart(2, '0');
   document.querySelector('.sec').textContent = seconds.toString().padStart(2, '0');
+  
 }
+  
+
 
 // 시작 버튼 클릭 시 타이머 시작
   document.querySelector('.start-button').addEventListener('click', () => {
@@ -102,10 +106,11 @@ function updateDisplay() {
   minutes = parseInt(document.querySelector('.min').textContent, 10);
   hours = parseInt(document.querySelector('.hour').textContent, 10);
   days = parseInt(document.querySelector('.day').textContent, 10);
-
+  stopButtonClickCount = 0;
+  
   startTimer();
   document.querySelector('.start-button').disabled = true;
-});
+})
   document.querySelector('.stop-button').addEventListener('click', () => {stopTimer();
   document.querySelector('.start-button').disabled = false;
 });
@@ -125,3 +130,5 @@ document.querySelector('.stop-button').addEventListener('click', () => {
     updateDisplay();
     stopButtonClickCount = 0;
   }})
+
+    
