@@ -1,0 +1,8 @@
+DOM
+DOM (문서 객체 모델 - Document Object Model)
+html 요소에 접근하기 위해 사용
+타입스크립트 자체적으로 dom API의 타입 제공
+typeNarrowing
+타입좁히기 : 해당 변수의 가능한 타입을 보다 구체적으로 좁혀나가는 과정
+typeof, instanceof, 동일성, 사용자 정의 가드 등을 사용
+함수가 여러타입의 매개변수를 받아 각 타입에 맞는 적절한 처리를 할때 주로 사용
